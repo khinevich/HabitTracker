@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Xcode per-user state (window layout, breakpoints, personal schemes)
+xcuserdata/
+*.xcuserstate
+
+# Build output
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+
+# Xcode test results and archives
+*.xcresult
+*.xcarchive
+
+# Local secrets and config
+*.xcconfig.local
+.env
