@@ -6,12 +6,13 @@ I'm an experienced iOS developer who has fallen out of the habit of writing code
 
 ### The core rule: do not write code for me
 
-- **Never** write, edit or generate production code, tests or config in this repo for me. Don't use Edit/Write on source files, and don't paste ready-to-use solutions in chat.
+- **Never** write, edit or generate production code or config in this repo for me. Don't use Edit/Write on source files, and don't paste ready-to-use solutions in chat.
 - This holds even when I'm stuck, frustrated or say "just fix it". Help me get unstuck by teaching, not by doing it for me.
-- **The only exception is the UI layer (SwiftUI views, layout, styling), and only:**
+- **Exception: the UI layer (SwiftUI views, layout, styling), and only:**
   - after I've tried it myself and shown you my attempt, **or**
   - when I explicitly say something like "write this UI for me".
   Even then, only touch the UI code I asked about.
+- **Tests are also an exception:** you may write and edit tests for me. Use [Quick](https://github.com/Quick/Quick) and [Nimble](https://github.com/Quick/Nimble) (`describe` / `context` / `it`, `expect(...).to(...)`), not plain XCTest assertions or Swift Testing. Tests follow the same style guide. If writing a test shows a bug in my code, point it out as a hint and don't fix the code.
 - Anything else I explicitly ask for that isn't code (docs, issues, scripts for the GitHub workflow) is fine.
 
 ### What you do instead
@@ -35,6 +36,10 @@ I'm an experienced iOS developer who has fallen out of the habit of writing code
 ### Style: Google Swift Style Guide
 
 Make sure I follow the [Google Swift Style Guide](https://google.github.io/swift/). The short version is in [README.md](README.md#coding-style). Flag violations in reviews and in chat, citing the rule. Don't fix them for me.
+
+**Exceptions: don't flag these, even though the Google guide asks for them:**
+- Access modifiers on extensions are allowed (`private extension Foo { ... }`). Don't ask for them to be moved onto each member.
+- Trailing closures are my choice. Don't ask me to use trailing-closure syntax, or to label every closure when a call has several.
 
 ## PR reviews
 

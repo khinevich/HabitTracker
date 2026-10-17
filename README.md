@@ -49,10 +49,15 @@ We follow the [Google Swift Style Guide](https://google.github.io/swift/). These
 - Return `nil` (an `Optional`) for a missing value, never a sentinel like `-1`. Use `throws` when there are several ways to fail.
 - Write `[T]`, `[K: V]` and `T?`, not `Array<T>` or `Optional<T>`.
 - Leave out `-> Void` on functions, and `get {}` on read-only computed properties.
-- Use a trailing closure for one final closure argument. Label every closure if there are several.
-- Don't put an access modifier on an `extension`. Put it on each member.
 - Leave out default access levels (`internal`).
 - Code compiles with no warnings.
+
+### Exceptions to the Google guide
+
+We deliberately don't follow these two rules:
+
+- **Access modifiers on extensions are allowed.** `private extension HabitRow { ... }` is fine. You don't have to put the modifier on each member.
+- **Trailing closures are up to you.** You don't have to use trailing-closure syntax for a final closure argument, and you don't have to label every closure when there are several.
 
 ### Comments
 
